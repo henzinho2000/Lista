@@ -1,0 +1,35 @@
+@media only screen and (max-width: 700px){
+    h1{
+        font-size: 20vw;
+    }
+    h2{
+        font-size: 4vw;
+    }
+    .center{
+        margin-top: 5vw;
+        transform: scale(3);
+    }
+    .lixe{
+        margin-top: 12vw;
+        scale: 3;
+        &:active{
+            width: 7vw;
+        }
+    }
+    .trueOrFalse{
+        width: 80vw;
+        height: 50vw;
+        h1{
+            font-size: 7vw;
+        }
+        input{
+            margin-top: 4vw;
+            width: 13vw;
+            padding: 3vw;
+            font-size: 3vw;
+        }
+    }
+    .coisas{
+        height: 50vw !important;
+    }
+}

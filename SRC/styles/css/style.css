@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: rgb(27, 26, 26);
+  font-family: "Nunito", sans-serif;
+  transition: all 0.5s;
+}
+
+h1,
+h2 {
+  color: white;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 187, 39);
+  border-radius: 1vw;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+h1 {
+  font-size: 5vw;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(79, 46, 226);
+}
+main form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main form .lixe {
+  width: 2vw;
+  padding: 1.1vw;
+  border-radius: 50%;
+  animation: 0.5s entrada;
+  background-color: white;
+  transition: all 0.2s;
+}
+main form .lixe:hover {
+  transform: translateY(-0.5vw);
+  cursor: pointer;
+  box-shadow: 0.7vw 0.7vw 0vw 0 black;
+}
+main form .lixe:active {
+  width: 1.7vw;
+}
+main form .coisas {
+  width: 100%;
+  height: 20vw;
+  display: none;
+  overflow: scroll;
+  margin-top: 1vw;
+  justify-content: space-between;
+}
+main form .coisas .section {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 187, 39);
+  padding: 1vw;
+  width: 80%;
+  border-radius: 5vw;
+  margin-top: 1vw;
+  animation: 0.5s entrada;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+main form .coisas .section:hover {
+  transform: translateY(-0.5vw);
+  cursor: pointer;
+  box-shadow: 0.7vw 0.7vw 0vw 0 black;
+}
+main form .coisas .section #exit {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 1vw;
+  font-weight: 900;
+}
+main form .coisas .section #exit:hover {
+  animation: 0.5s pulo;
+}
+main form .coisas .tarefas {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main form .coisas .tarefas h2 {
+  position: fixed;
+}
+main form .coisas .concluidas {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main form .coisas .concluidas h2 {
+  position: fixed;
+}
+main form .coisas .concluidas .section {
+  width: 60%;
+  background-color: rgb(19, 224, 105);
+}
+main form .center {
+  display: flex;
+}
+main form .center #number {
+  width: 5vw;
+  padding: 1vw;
+  font-size: 1vw;
+  border-radius: 5vw;
+  background-color: rgb(255, 227, 70);
+  margin-left: -3.5vw;
+  font-weight: 700;
+  margin-bottom: 1vw;
+}
+main form .center #unidades {
+  width: 10vw;
+  border: none;
+  border-radius: 4vw;
+  padding-left: 1vw;
+  font-size: 1vw;
+  margin-left: -3.5vw;
+  background-color: rgb(255, 187, 39);
+  font-weight: 700;
+  margin-bottom: 1vw;
+}
+main form .center #nome {
+  border-radius: 10vw;
+  width: 90%;
+  height: 4vw;
+  padding-left: 1vw;
+  font-size: 1vw;
+  margin-bottom: 1vw;
+}
+main form .center #submit {
+  border-radius: 10vw;
+  background-color: rgb(255, 136, 24);
+  z-index: 1vw;
+  font-size: 1.1vw;
+  margin-left: -3.5vw;
+  font-weight: 700;
+  width: 10vw;
+  height: 4vw;
+}
+
+@keyframes pulo {
+  0% {
+    scale: 1;
+    transform: rotate(0deg);
+  }
+  33% {
+    scale: 1.1;
+    transform: rotate(2deg);
+  }
+  66% {
+    scale: 1.1;
+    transform: rotate(-2deg);
+  }
+  100% {
+    scale: 1;
+    transform: rotate(0deg);
+  }
+}
+@keyframes entrada {
+  0% {
+    opacity: 0;
+    transform: translateY(-1vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0vw);
+  }
+}
+/*True OR False*/
+.trueOrFalse {
+  z-index: 2;
+  width: 20vw;
+  height: 10vw;
+  display: none;
+  position: absolute;
+  background-color: rgb(40, 7, 78);
+  border-radius: 4vw;
+  padding: 3vw;
+  text-align: justify;
+  box-shadow: 0vw 0vw 2vw 0 rgba(0, 0, 0, 0.404);
+}
+.trueOrFalse h1 {
+  font-size: 2vw;
+}
+.trueOrFalse #no {
+  background-color: grey;
+  color: white;
+}
+.trueOrFalse input {
+  width: 5vw;
+  border-radius: 1vw;
+  padding: 1vw;
+  font-size: 1vw;
+  font-weight: 700;
+}
+.trueOrFalse input:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px) {
+  h1 {
+    font-size: 10vw;
+  }
+  h2 {
+    font-size: 2vw;
+  }
+  .coisas {
+    margin-top: 1vw;
+    height: 30vw !important;
+  }
+  .coisas #exit {
+    transform: scale(1.2);
+    margin-right: 1vw;
+    background-color: transparent !important;
+  }
+  .coisas .tarefas, .coisas .concluidas {
+    margin-top: 5vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 20vw;
+  }
+  h2 {
+    font-size: 4vw;
+  }
+  .center {
+    margin-top: 5vw;
+    transform: scale(3);
+  }
+  .lixe {
+    margin-top: 12vw;
+    scale: 3;
+  }
+  .lixe:active {
+    width: 7vw;
+  }
+  .trueOrFalse {
+    width: 80vw;
+    height: 50vw;
+  }
+  .trueOrFalse h1 {
+    font-size: 7vw;
+  }
+  .trueOrFalse input {
+    margin-top: 4vw;
+    width: 13vw;
+    padding: 3vw;
+    font-size: 3vw;
+  }
+  .coisas {
+    height: 50vw !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

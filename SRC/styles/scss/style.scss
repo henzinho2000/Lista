@@ -1,0 +1,226 @@
+@import "./var.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	color: $color-black;
+	font-family: "Nunito", sans-serif;
+	transition: all 0.5s;
+}
+h1,
+h2 {
+	color: white;
+}
+::-webkit-scrollbar {
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background-color: $color-yellow;
+	border-radius: 1vw;
+}
+
+::-webkit-scrollbar-corner {
+	background-color: transparent;
+}
+h1 {
+	font-size: $font-size-h1;
+}
+input,
+button {
+	border: none;
+	outline: none;
+}
+
+main {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $color-lilas;
+	form {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		.lixe{
+			width: 2vw;
+			padding: 1.1vw;
+			border-radius: 50%;
+			animation: .5s entrada;
+			background-color: white;
+			transition: all .2s;
+			&:hover{
+				transform: translateY(-.5vw);
+				cursor: pointer;
+				box-shadow: .7vw .7vw 0vw 0 black;
+			}
+			&:active{
+				width: 1.7vw;
+			}
+		}
+		.coisas {
+			width: 100%;
+			height: 20vw;
+			display: none;
+			overflow: scroll;
+			margin-top: 1vw;	
+			justify-content: space-between;
+			.section {
+				display: flex;
+				justify-content: space-between;
+				background-color: $color-yellow;
+				padding: 1vw;
+				width: 80%;
+				border-radius: 5vw;
+				margin-top: 1vw;
+				animation: 0.5s entrada;
+				user-select: none;
+				cursor: pointer;
+				font-weight: 700;
+				transition: all .2s;
+				&:hover {
+					transform: translateY(-.5vw);
+					cursor: pointer;
+					box-shadow: .7vw .7vw 0vw 0 black;
+				}
+				#exit {
+					width: 1.5vw;
+					height: 1.5vw;
+					border-radius: 1vw;
+					font-weight: 900;
+					&:hover {
+						animation: 0.5s pulo;
+					}
+				}
+			}
+
+			.tarefas {
+				width: 45%;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				h2{
+					position: fixed;
+				}
+			}
+			.concluidas {
+				width: 60%;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				h2{
+					position: fixed;
+				}
+				.section {
+					width: 60%;
+					background-color: $color-green;
+				}
+			}
+		}
+
+		.center {
+			display: flex;
+			#number {
+				width: 5vw;
+				padding: 1vw;
+				font-size: 1vw;
+				border-radius: 5vw;
+				background-color: $color-orange;
+				margin-left: -3.5vw;
+				font-weight: 700;
+				margin-bottom: 1vw;
+			}
+			#unidades {
+				width: 10vw;
+				border: none;
+				border-radius: 4vw;
+				padding-left: 1vw;
+				font-size: 1vw;
+				margin-left: -3.5vw;
+				background-color: $color-yellow;
+				font-weight: 700;
+				margin-bottom: 1vw;
+			}
+			#nome {
+				border-radius: 10vw;
+				width: 90%;
+				height: 4vw;
+				padding-left: 1vw;
+				font-size: 1vw;
+				margin-bottom: 1vw;
+			}
+			#submit {
+				border-radius: 10vw;
+				background-color: $color-red;
+				z-index: 1vw;
+				font-size: 1.1vw;
+				margin-left: -3.5vw;
+				font-weight: 700;
+				width: 10vw;
+				height: 4vw;
+			}
+		}
+	}
+}
+@keyframes pulo {
+	0% {
+		scale: 1;
+		transform: rotate(0deg);
+	}
+	33% {
+		scale: 1.1;
+		transform: rotate(2deg);
+	}
+	66% {
+		scale: 1.1;
+		transform: rotate(-2deg);
+	}
+	100% {
+		scale: 1;
+		transform: rotate(0deg);
+	}
+}
+@keyframes entrada {
+	0% {
+		opacity: 0;
+		transform: translateY(-1vw);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0vw);
+	}
+}
+
+/*True OR False*/
+.trueOrFalse{
+	z-index: 2;
+	width: 20vw;
+	height: 10vw;
+	display: none;
+	position: absolute;
+	background-color: $color-lilas2;
+	border-radius: 4vw;
+	padding: 3vw;
+	text-align: justify;
+	box-shadow: 0vw 0vw 2vw 0 rgba(0, 0, 0, 0.404);
+	h1{
+		font-size: 2vw;
+	}
+	#no{
+		background-color: grey;
+		color:white;
+	}
+	input{
+		width: 5vw;
+		border-radius: 1vw;
+		padding: 1vw;
+		font-size: 1vw;
+		font-weight: 700;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
+
+@import "./tablete.scss";
+@import "./celular.scss";

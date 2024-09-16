@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lista</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="./SRC/scripts/script.js"
+			type="text/javascript"
+			defer
+		></script>
+		<link rel="shortcut icon" href="./SRC/images/list.png" type="image/x-icon">
+		<link rel="stylesheet" href="./SRC/styles/css/style.css" />
+	</head>
+	<body>
+		<main>
+			<form action="">
+				<h1>Your List ;)</h1>
+				<div class="center">
+					<input
+						type="text"
+						name="nome"
+						id="nome"
+						maxlength="50"
+						placeholder="digite a sua anotação"
+					/>
+
+					<input
+						min="1"
+						value="1"
+						type="number"
+						name="number"
+						id="number"
+					/>
+					<select name="unidades" id="unidades">
+						<option value="unid">unid</option>
+						<option value="g">g</option>
+						<option value="kg">kg</option>
+						<option value="m">m</option>
+						<option value="cm">cm</option>
+					</select>
+					<input type="submit" id="submit" value="enviar" />
+				</div>
+				<div class="coisas">
+					<div class="tarefas"><h2>Em Andamento</h2><br></div>
+					<div class="concluidas""><h2>Concluídas  <span class="conclusao"></span></h2> <br></div>
+				</div>
+				<img src="./SRC/images/54324.png" alt="lixeira" class="lixe">
+			</form>
+			<div class="trueOrFalse">
+				<h1>
+					você deseja apagar todas as suas anotações?
+				</h1>
+				<div class="botoes">
+					<input type="button" id="yes" value="SIM" onclick="apagar()">
+					<input type="button" id="no" value="NÃO" onclick="naoApagar()">
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

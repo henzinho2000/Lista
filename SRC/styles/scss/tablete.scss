@@ -1,0 +1,20 @@
+@media only screen and (max-width: 1300px){
+    h1{
+        font-size: 10vw;
+    }
+    h2{
+        font-size:2vw;
+    }
+    .coisas{
+        margin-top: 1vw;
+        height: 30vw !important;
+        #exit{
+            transform: scale(1.2);
+            margin-right: 1vw;
+            background-color: transparent !important;
+        }
+        .tarefas,.concluidas{
+            margin-top: 5vw;
+        }
+    }
+}
